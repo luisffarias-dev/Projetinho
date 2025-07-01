@@ -1,0 +1,24 @@
+# Spring Boot
+/api/Projetinho/target/
+*.log
+
+# VB.NET
+.net/bin/
+.net/obj/
+.net/*.user
+.net/*.suo
+
+# Ignorar a pasta .net inteira para evitar problemas com repositórios aninhados
+.net/
+
+# Arquivos temporários do Windows
+Thumbs.db
+Desktop.ini
+
+# IDEs e editores
+.vscode/
+.idea/
+*.iml
+
+# Outros
+.DS_Store

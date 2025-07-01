@@ -1,0 +1,1 @@
+INSERT INTO login (login, senha, status, adm) VALUES ('admin', 'admin', '0', 1)
