@@ -212,6 +212,12 @@ Content-Type: application/json
 }
 ```
 ---
+## 🖼️ Images
+
+### Application Screenshots
+
+
+---
 ## 🤝 Contribution
 * Fork or clone the project
 ```
