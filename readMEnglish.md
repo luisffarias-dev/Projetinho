@@ -214,7 +214,34 @@ Content-Type: application/json
 ---
 ## 🖼️ Images
 
-### Application Screenshots
+<img width="815" height="604" alt="Captura de tela 2025-10-24 172603" src="https://github.com/user-attachments/assets/8bfdefc0-0d81-4391-91a6-edd31a03622a" />
+<br>
+<em>Image 1: Login Page</em>
+<br>
+<br>
+<img width="914" height="635" alt="Register" src="https://github.com/user-attachments/assets/e46be22d-05da-4e8e-81cf-0ab70345964e" />
+<br>
+<em>Image 2: Register Page</em>
+<br>
+<br>
+<img width="916" height="632" alt="User registration" src="https://github.com/user-attachments/assets/26838aa7-89de-4ea1-a3d2-8548d770521c" />
+<br>
+<em>Image 3: User registration Page</em>
+<br>
+<br>
+<img width="914" height="636" alt="Welcome" src="https://github.com/user-attachments/assets/f1337078-4df6-431c-aed8-246a57908821" />
+<br>
+<em>Image 4: User Home Screen Page</em>
+<br>
+<br>
+<img width="941" height="694" alt="image" src="https://github.com/user-attachments/assets/5dc1e50e-19c3-4daa-8542-5e43d12fa076" />
+<br>
+<em>Image 5: Choose workout Page</em>
+<br>
+<br>
+
+
+
 
 
 ---
