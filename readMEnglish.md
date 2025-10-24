@@ -15,7 +15,6 @@
 * [⚙️ Prerequisites](#️-prerequisites)
 * [🚀 Installation and Configuration](#-installation-and-configuration)
 * [🧪 Testing](#-testing)
-* [🔗 API Endpoints](#-api-endpoints)
 * [🤝 Contribution](#-contribution)
 * [📄 License](#-license)
 * [👥 Team Members](#-team-members)
@@ -94,12 +93,13 @@ The system is designed for gyms or users who want to:
 
 * Git & GitHub
 * Postman
-* Docker (optional)
-* GitHub Actions (optional)
+* Swagger
+* sql server management studio 20
 
 ---
 
 ## 📁 Project Structure
+```
 Projetinho/
 ├── 📁 api/Projetinho
 │ ├── 📁 src/main/java/com/... # API source code
@@ -115,7 +115,7 @@ Projetinho/
 │
 ├── 📄 TeamMembers.txt # Project team members list
 └── 📄 .gitignore
-
+```
 ---
 
 ## ⚙️ Prerequisites
@@ -136,47 +136,109 @@ Projetinho/
 git clone https://github.com/luisffarias-dev/Projetinho.git
 cd Projetinho
 ```
+### 2. Configure and Run the API (Spring Boot)
+```cd api/Projetinho
+
+# Install dependencies
+mvn install
+
+# Configure database
+# Edit src/main/resources/application.properties:
+# spring.datasource.url=jdbc:mysql://localhost:8080/projetinho
+# spring.datasource.username=username
+# spring.datasource.password=password
+
+# Run API
+mvn spring-boot:run
+```
 API will be available at: http://localhost:8080
 
-3. Configure and Run the Frontend (VB.NET)
-Open the solution in Visual Studio
+### 3. Configure and Run the Frontend (VB.NET)
+* Open the solution in Visual Studio
 
-Adjust API URL in project global settings
+* Adjust API URL in project global settings
 
-Compile and run the project (F5)
+* Compile and run the project (F5)
 
+---
+## 🧪 Testing
 
-🧪 Testing
 API Testing: via Postman, Swagger and Insomnia
 
 Interface Testing: manual VB.NET execution
 
-🔗 API Endpoints
-Method	Endpoint	Description
-GET	/users	List all users
-POST	/users	Create a new user
-GET	/workouts	List workouts by user
-POST	/workouts	Generate new automatic workout
-GET	/cardio	List cardio activities
-POST	/cardio	Register cardio activity
-🤝 Contribution
-Fork the project
+## 🔗 API Endpoints
 
-Create a feature branch:
+### Users
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/users` | List all users |
+| `POST` | `/users` | Create a new user |
+| `GET` | `/users/{id}` | Get user by ID |
+| `PUT` | `/users/{id}` | Update user |
+| `DELETE` | `/users/{id}` | Delete user |
+
+### Workouts
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/workouts` | List all workouts |
+| `POST` | `/workouts` | Generate automatic workout |
+| `GET` | `/workouts/user/{userId}` | List workouts by user |
+| `GET` | `/workouts/{id}` | Get workout by ID |
+| `PUT` | `/workouts/{id}` | Update workout |
+| `DELETE` | `/workouts/{id}` | Delete workout |
+
+### Cardio
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/cardio` | List all cardio activities |
+| `POST` | `/cardio` | Register cardio activity |
+| `GET` | `/cardio/user/{userId}` | List cardio by user |
+| `GET` | `/cardio/{id}` | Get cardio activity by ID |
+| `PUT` | `/cardio/{id}` | Update cardio activity |
+| `DELETE` | `/cardio/{id}` | Delete cardio activity |
+
+### Example Requests
+
+#### Create User
+```http
+POST /users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@email.com",
+  "Password": "*******",
+}
+```
+---
+## 🤝 Contribution
+* Fork or clone the project
+```
+git clone https://github.com/luisffarias-dev/Projetinho.git
+```
+* Create a feature branch:
+```
 git checkout -b feature/NewFeature
-
-Commit your changes:
+```
+* Commit your changes:
+```
 git commit -m "feat: change description"
-
-Push to the repository:
+```
+* Push to the repository:
+```
 git push origin feature/NewFeature
-
-Open a Pull Request
-
-📄 License
+```
+* Open a Pull Request
+```
+https://github.com/luisffarias-dev/Projetinho/pulls
+```
+---
+## 📄 License
 This project is distributed under the MIT license.
 
-👥 Team Members
+---
+## 👥 Team Members
 Luis Fernando França Farias
 
 Douglas Barbosa de Oliveira
